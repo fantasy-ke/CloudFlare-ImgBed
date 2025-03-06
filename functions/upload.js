@@ -228,7 +228,7 @@ export async function onRequestPost(context) {  // Contents of context object
             err = await res.text();
         }
     } else if (uploadChannel === 'External') {
-        // --------------------外链渠道----------------------
+        // -------------外链渠道---------------
         const res = await uploadFileToExternal(env, formdata, fullId, metadata, returnLink, url);
         return res;
     } else {
@@ -535,6 +535,7 @@ async function uploadFileToTelegram(env, formdata, fullId, metadata, fileExt, fi
         return res;
     }
 }
+
 
 
 // 外链渠道
